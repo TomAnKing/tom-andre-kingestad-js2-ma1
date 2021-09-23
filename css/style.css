@@ -1,7 +1,7 @@
 html,
 body {
   margin: 0;
-  max-width: 1900px;
+  max-width: 90%;
   margin: auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -9,6 +9,17 @@ body {
 h1 {
   font-size: 34px;
   font-weight: lighter;
+  color: #273b49;
+}
+
+h4 {
+  color: #273b49;
+  font-size: 18px;
+}
+
+p {
+  color: #273b49;
+  font-size: 18px;
 }
 
 .results {
@@ -19,10 +30,11 @@ h1 {
 }
 
 .product {
-  border: 1px solid grey;
   padding: 1rem;
   min-height: 200px;
   border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .search {
@@ -32,4 +44,29 @@ h1 {
   width: 150px;
   border-radius: 5px;
   border: 1px solid grey;
+}
+
+.error {
+  border: 1px solid darkred;
+  padding: 1rem;
+  color: darkred;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 16px solid #273b49;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
