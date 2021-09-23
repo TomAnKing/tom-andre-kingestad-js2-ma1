@@ -1,3 +1,5 @@
+import { displayMessage } from "./displayMessage.js";
+
 export function displayProducts(productsToRender) {
   const resultsContainer = document.querySelector(".results");
   resultsContainer.innerHTML = "";
@@ -8,4 +10,10 @@ export function displayProducts(productsToRender) {
                                         <p>Price: ${product.price}</p>
                                         </div>`;
   });
+
+  if (productsToRender.length === 0) {
+    resultsContainer.innerHTML = displayMessage(
+      "No products available below selected price"
+    );
+  }
 }

@@ -1,4 +1,5 @@
 import { displayProducts } from "./displayProducts.js";
+
 export function filterPrice(products) {
   const search = document.querySelector(".search");
 

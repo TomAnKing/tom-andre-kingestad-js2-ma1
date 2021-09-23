@@ -53,6 +53,13 @@ p {
   background: rgba(255, 0, 0, 0.1);
 }
 
+.no-results {
+  border: 1px solid orange;
+  padding: 1rem;
+  color: orange;
+  background: rgba(100, 0, 0, 0.1);
+}
+
 .loader {
   border: 10px solid #f3f3f3;
   border-top: 16px solid #273b49;
