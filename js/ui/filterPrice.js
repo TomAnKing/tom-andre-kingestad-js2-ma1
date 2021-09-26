@@ -4,7 +4,6 @@ export function filterPrice(products) {
   const search = document.querySelector(".search");
 
   search.onkeyup = function (filteredPrice) {
-    console.log(event);
     const searchValue = parseFloat(event.target.value);
 
     const filteredProduct = products.filter(function (product) {
@@ -12,6 +11,10 @@ export function filterPrice(products) {
         return true;
       }
     });
-    displayProducts(filteredProduct);
+    if (searchValue) {
+      displayProducts(filteredProduct);
+    } else {
+      displayProducts(products);
+    }
   };
 }

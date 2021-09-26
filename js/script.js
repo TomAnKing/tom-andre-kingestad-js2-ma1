@@ -12,12 +12,10 @@ async function getProducts() {
 
     const json = await response.json();
 
-    console.log(json);
-
     const products = json;
 
-    displayProducts(products);
     filterPrice(products);
+    displayProducts(products);
   } catch (error) {
     console.log(error);
     resultsContainer.innerHTML = displayError("Failed to display products");
